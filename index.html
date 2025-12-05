@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Página de inicio para el proyecto </title>
+  <style>
+    :root{
+      --bg1: #0f172a;
+      --bg2: #0b1220; 
+      --accent: #7c3aed; 
+      --glass: rgba(255,255,255,0.06);
+      --glass-2: rgba(255,255,255,0.04);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      min-height:100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background: linear-gradient(180deg,var(--bg1) 0%, var(--bg2) 100%);
+      color: #eef2ff;
+      display:grid;
+      place-items:center;
+      padding:2rem;
+    }
+    .card{
+      width:100%;
+      max-width:920px;
+      border-radius:18px;
+      padding:1.25rem;
+      background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+      box-shadow: 0 8px 30px rgba(2,6,23,0.6);
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:1rem;
+      align-items:center;
+      backdrop-filter: blur(6px) saturate(110%);
+      border: 1px solid rgba(255,255,255,0.04);
+    }
+    @media (max-width:820px){
+      .card{grid-template-columns:1fr; padding:1rem}
+      .image {order:-1}
+    }
+    .content h1{
+      margin:0 0 .5rem 0;
+      font-size:clamp(1.25rem, 2.4vw, 1.9rem);
+      letter-spacing:-0.02em;
+    }
+    .content p{
+      margin:0 0 1rem 0;
+      color: #cbd5ff;
+      line-height:1.45;
+    }
+    .cta{
+      display:flex;
+      gap:.75rem;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+    .btn{
+      appearance:none;
+      border:0;
+      padding:.7rem 1.05rem;
+      border-radius:10px;
+      font-weight:600;
+      cursor:pointer;
+      background: linear-gradient(90deg, var(--accent), #4f46e5);
+      color:white;
+      box-shadow: 0 6px 18px rgba(92, 33, 255, 0.18);
+      transition: transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:active{transform:translateY(1px)}
+    .btn.secondary{
+      background:transparent;
+      color:#cbd5ff;
+      border:1px solid rgba(255,255,255,0.06);
+      padding:.55rem .9rem;
+      box-shadow:none;
+    }
+    .meta{
+      display:flex;
+      gap:.6rem;
+      font-size:.9rem;
+      color:#aab3ff;
+      align-items:center;
+    }
+    .image{
+      width:100%;
+      max-width:360px;
+      height:220px;
+      border-radius:12px;
+      overflow:hidden;
+      background: linear-gradient(180deg,var(--glass),var(--glass-2));
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow: 0 6px 20px rgba(2,6,23,0.5);
+      border:1px solid rgba(255,255,255,0.03);
+    }
+    .image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+    }
+    footer{margin-top:.9rem; font-size:.85rem; color:#9aa4ff}
+  </style>
+</head>
+<body>
+  <article class="card" role="region" aria-label="Tarjeta principal">
+    <div class="content">
+      <h1>Bienvenido a la  pagina de inicio</h1>
+      <p>Aqui se mostraran algunas actividades y proyectos del CECYTEA Jesus Maria.</p>
+
+      <div class="cta">
+         <a class="btn-animal btn-gato" href="PP.html">ir a la pagina principal</a
+        <a class="btn secondary" href="#" role="button">Más información</a>
+      </div>
+      
+    </div>
+
+    <div class="image">
+      <!-- Cambia el src a la ruta de tu imagen -->
+      <img src="https://www.bing.com/images/search?view=detailV2&ccid=k65MGp4M&id=9C9A8E1B2DF621D3BEDADF1C6F0B3433CE786068&thid=OIP
+        .k65MGp4MD2QvCnYOHqMcCAHaHa&mediaurl=https%3A%2F%2Flookaside.fbsbx.com%2Flookaside%2Fcrawler%2Fmedia%2F%3Fmedia_id%3D650250076906188&cdnurl=https%3A%2F%2Fth.bing
+        .com%2Fth%2Fid%2FR.93ae4c1a9e0c0f642f0a760e1ea31c08%3Frik%3DaGB4zjM0C28c3w%26pid%3DImgRaw%26r%3D0&exph=2048&expw=2048&q=logo+cecyte+jes%C3%BAs+mar%C3%ADa&form=IRPRST&ck
+        =D87BD4E9D2DEE47023891BE918224958&selectedindex=12&itb=0&cw=1341&ch=666&ajaxhist=0&ajaxserp=0&vt=0&sim=11" alt="Imagen decorativa" />
+    </div>
+  </article>
+
+  <script>
+    document.getElementById('primaryBtn').addEventListener('click', function(){
+      // ejemplo: ir a la página principal — cambia la URL si lo deseas
+      window.location.href = '/';
+    });
+  </script>
+</body>
+</html>
